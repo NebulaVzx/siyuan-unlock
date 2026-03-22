@@ -139,6 +139,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: List build directory (Windows)
+        if: contains( matrix.config.goos, 'windows')
+        shell: cmd
+        run: |
+          echo "=== Checking build directory ==="
+          dir "${{ github.workspace }}\siyuan-note\siyuan\app\build"
+          echo "=== Looking for win.exe files ==="
+          dir "${{ github.workspace }}\siyuan-note\siyuan\app\build\*.exe"
+          echo "=== Full listing with wildcard ==="
+          dir "${{ github.workspace }}\siyuan-note\siyuan\app\build\siyuan-*-win.exe"
+
       - name: Upload Electron App
         uses: shogo82148/actions-upload-release-asset@v1
         env:
