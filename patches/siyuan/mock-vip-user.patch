@@ -33,7 +33,7 @@ index 9010350078560bb298de72bc73d54e51db60f21b..dfe9ab286f50431bdb30c633b8e63886
 +			UserNickname: "",
 +			UserCreateTime: "29991231 00:00:00",
 +			UserSiYuanProExpireTime: -1,
-+			UserToken: "token",
++			UserToken: "",
 +			UserTokenExpireTime: "32503593600",
 +			UserSiYuanRepoSize: 0,
 +			UserSiYuanPointExchangeRepoSize: 0,
